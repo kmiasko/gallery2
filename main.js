@@ -1,11 +1,3 @@
-// basic extend function
-function extend(a, b) {
-  for (var key in b)
-    if (b.hasOwnProperty(key))
-      a[key] = b[key];
-  return a;
-}
-
 var DRAGnDROP = (function() {
 
   var config = {
@@ -19,7 +11,7 @@ var DRAGnDROP = (function() {
 
   function init(conf) {
     if (conf) {
-      extend(config, conf);
+      Object.assign(config, conf);
     }
     element = document.createElement('div');
     element.classList.add(config.elementClass);
@@ -86,9 +78,11 @@ var GALLERY = (function() {
   };
 
   // gallery init function
-  // overvrite defaults in config  
+  // overvrite defaults in config
   function init(config) {
-    if (config) extend(configuration, config);
+    if (config) {
+      Object.assign(configuration, config);
+    }
     start();
   }
 
