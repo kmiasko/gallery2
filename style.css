@@ -1,0 +1,17 @@
+.drag-area {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
+  border: 1px dashed #000;
+  border-radius: 10px;
+  
+  &::after {
+    content: "Drag files here";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9em;
+  }
+}
