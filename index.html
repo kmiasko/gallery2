@@ -6,8 +6,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="parent">
-  </div>
+	<div id="parent">
+		<input type="file" name="files" accept=".jpg,.png" id="files" multiple/>
+		<button name="send" id="send">Upload</button>
+		<div id="drag-area" class="drag-area"></div>
+		<div id="gallery"></div>
+	</div>
   <script src="main.js"></script>
 </body>
 </html>
