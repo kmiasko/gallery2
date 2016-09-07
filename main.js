@@ -18,7 +18,9 @@ var DRAGnDROP = (function() {
     files;
 
   function init(conf) {
-    if (conf) extend(config, conf);
+    if (conf) {
+      extend(config, conf);
+    }
     element = document.createElement('div');
     element.classList.add(config.elementClass);
     element.addEventListener("dragenter", dragenter, false);
