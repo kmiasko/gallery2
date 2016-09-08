@@ -1,3 +1,10 @@
+.parent-wrapper {
+  text-align: center;
+}
+.parent-wrapper span {
+  font-weight: 700;
+}
+
 .drag-area {
   width: 200px;
   height: 200px;
@@ -11,6 +18,72 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 0.9em;
+}
+
+.c-wrapper {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.controls {
+  display: inline-block;
+}
+
+.fileinput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.fileinput + label {
+  font-size: 1.25em;
+  padding: 0.5em;
+  font-weight: 700;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px dotted black;
+}
+
+.fileinput:focus + label,
+.fileinput + label:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.sendbutton {
+  background: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 1.25em;
+  padding: 0.5em;
+  border: 1px dotted black;
+  border-radius: 5px;
+}
+.sendbutton:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0 20px;
+}
+.gallery img {
+  vertical-align: top;
+  display: inline-block;
 }

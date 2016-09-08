@@ -170,6 +170,7 @@ var GALLERY = (function() {
 
   // handle uploaded files
   function handleFiles(files) {
+    gallery.innerHTML = '';
     for (var i = 0; i < files.length; i++) {
       if (!isAcceptedFile(files[i])) {
         continue;
@@ -192,7 +193,6 @@ var GALLERY = (function() {
     // upload files event for button
     button.addEventListener('click', function(e) {
       e.preventDefault();
-      gallery.innerHTML = '';
       handleFiles(fileInput.files);
     });
     document.removeEventListener('DOMContentLoaded', start);
@@ -204,4 +204,3 @@ var GALLERY = (function() {
 })();
 
 GALLERY.init();
-
